@@ -1,17 +1,18 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Add posts
+    Add posts
 {% endblock %}
 
 {% block content %}
     <h2>Add posts</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.title }}
-        {{ form.post }}
-        <input type="text" placeholder="Enter title" class="form-control"><br>
-        <textarea placeholder="Enter post" class="form-control"></textarea><br>
+        {{ form.title }}<br>
+        {{ form.post }}<br>
+        <!--<input type="text" placeholder="Enter title" class="form-control"><br>
+        <textarea placeholder="Enter post" class="form-control"></textarea><br>-->
         <button type="submit" class="btn btn-success">Add</button>
+        <span>{{ error }}</span>
     </form>
 {% endblock %}
