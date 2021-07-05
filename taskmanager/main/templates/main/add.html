@@ -10,8 +10,6 @@
         {% csrf_token %}
         {{ form.title }}<br>
         {{ form.post }}<br>
-        <!--<input type="text" placeholder="Enter title" class="form-control"><br>
-        <textarea placeholder="Enter post" class="form-control"></textarea><br>-->
         <button type="submit" class="btn btn-success">Add</button>
         <span>{{ error }}</span>
     </form>
