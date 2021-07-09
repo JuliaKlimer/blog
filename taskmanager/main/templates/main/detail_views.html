@@ -8,6 +8,7 @@
 <div class="alert alert-warning mt-2">
     <h1>{{ post.title }}</h1>
     <p>{{ post.post }}</p>
-
+    <a href="{% url 'post-delete' post.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'post-update' post.id %}" class="btn btn-info">Update</a>
 </div>
 {% endblock %}
