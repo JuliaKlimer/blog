@@ -5,7 +5,20 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Add posts</h2>
+<style>
+    h2{
+        text-align: center;
+        font-size: 45px;
+    }
+    form{
+        text-align: center;
+        padding-left: 120px;
+        padding-right: 120px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+</style>
+    <h2>Add post</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.title }}<br>

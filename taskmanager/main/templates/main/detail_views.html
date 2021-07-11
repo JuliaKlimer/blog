@@ -5,10 +5,19 @@
 {% endblock %}
 
 {% block content %}
-<div class="alert alert-warning mt-2">
+<style>
+    div[class]{
+        padding-left: 20px;
+    }
+    a[class]{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+</style>
+<div class="alert alert-success mt-2">
     <h1>{{ post.title }}</h1>
     <p>{{ post.post }}</p>
-    <a href="{% url 'post-delete' post.id %}" class="btn btn-danger">Delete</a>
     <a href="{% url 'post-update' post.id %}" class="btn btn-info">Update</a>
+    <a href="{% url 'post-delete' post.id %}" class="btn btn-danger">Delete</a>
 </div>
 {% endblock %}

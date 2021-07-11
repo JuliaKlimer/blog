@@ -5,16 +5,27 @@
 {% endblock %}
 
 {% block content %}
+<style>
+    h2{
+        text-align: center;
+        font-size: 45px;
+    }
+    h4{
+        text-align: center;
+        font-size: 25px;
+        padding: 15px;
+    }
+</style>
     <h2>Main page</h2>
     {% if posts %}
         {% for el in posts %}
-            <div class="alert alert-warning mt-2">
+            <div class="alert alert-success mt-2">
                 <h3>{{ el.title }}</h3>
                 <p>{{ el.post }}</p>
                 <a href="{% url 'post-detail' el.id %}" class="btn btn-success">Show more...</a>
             </div>
         {% endfor %}
     {% else %}
-        <p>No data</p>
+        <h4>No data</h4>
     {% endif %}
 {% endblock %}

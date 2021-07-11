@@ -5,10 +5,27 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Delete post</h2>
+<style>
+    h3{
+        text-align: center;
+    }
+    span{
+        text-align: center;
+        font-size: 25px;
+        padding: 15px;
+    }
+    form{
+        text-align: center;
+        padding-left: 120px;
+        padding-right: 120px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+</style>
+    <h3>Are you sure you want to delete this post?</h3>
     <form method="post">
         {% csrf_token %}
-        <button type="submit" class="btn btn-success">Delete</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
         <span>{{ error }}</span>
     </form>
 {% endblock %}
